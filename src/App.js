@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment, useState } from "react";
+import Form from "./Components/Form/Form";
+import "./index.css";
+import Appoitment from "./Components/Appoitment/Appoitment";
 
 function App() {
+
+  const [citas, setCitas] = useState([])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <h1>🐶Veterinaria Puppies🐱</h1>
+  
+      <div className="container">
+        <div className="patientInformation">
+          <Form 
+            citas={citas}
+            setCitas={setCitas}
+          />
+        </div>
+
+        <div className="appoitment">
+        <h3>Turnos</h3>
+          {citas.map( cita => <Appoitment key={cita.id} cita={cita}/> )}
+        </div>
+          
+          
+      </div>
+    </Fragment>
   );
 }
 
