@@ -7,7 +7,11 @@ const Appoitment = ({cita}) => {
 
       <Fragment>
         <h3>Turnos</h3>
-        <div className="card" style={{width: '15rem'}, {margin:'8px'}}>
+        <div className="card" 
+          style={{
+            width: '15rem',
+            margin:'8px'
+          }}>
         <div className="card-header">
           Turno asignado
         </div>

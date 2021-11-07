@@ -86,7 +86,7 @@ const Form = ({ citas, setCitas }) => {
               className="form-control"
               id="floatingInput"
               placeholder="Nombre de la mascota"
-              autocomplete="off"
+              autoComplete="off"
               onChange={actualizarState}
               value={mascota} />
             <label htmlFor="floatingInput">Nombre de la mascota</label>
@@ -98,7 +98,7 @@ const Form = ({ citas, setCitas }) => {
               className="form-control"
               id="floatingPassword"
               placeholder="Tipo de especie de la mascota"
-              autocomplete="off"
+              autoComplete="off"
               onChange={actualizarState}
               value={especie} />
             <label htmlFor="floatingPassword">Especie</label>
@@ -110,7 +110,7 @@ const Form = ({ citas, setCitas }) => {
               className="form-control"
               id="floatingPassword"
               placeholder="Nombre del dueño"
-              autocomplete="off"
+              autoComplete="off"
               onChange={actualizarState}
               value={dueño} />
             <label htmlFor="floatingPassword">Nombre del dueño</label>
@@ -142,7 +142,7 @@ const Form = ({ citas, setCitas }) => {
               className="form-control"
               id="floatingInput"
               placeholder="Sintomas"
-              autocomplete="off"
+              autoComplete="off"
               onChange={actualizarState}
               value={sintomas} />
             <label htmlFor="floatingInput">Motivos de la consulta</label>
