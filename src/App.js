@@ -9,22 +9,22 @@ function App() {
 
   return (
     <Fragment>
-      <h1>🐶Veterinaria Puppies🐱</h1>
-  
+
+      <img src="https://estaticos.qdq.com/swdata/home_photos/199/199764721/be1953f6d59e46b488b007448452da01.jpg" className="img-fluid" alt="..." />
+
       <div className="container">
         <div className="patientInformation">
-          <Form 
+          <Form
             citas={citas}
             setCitas={setCitas}
           />
         </div>
 
         <div className="appoitment">
-        <h3>Turnos</h3>
-          {citas.map( cita => <Appoitment key={cita.id} cita={cita}/> )}
+          {citas.map(cita => <Appoitment key={cita.id} cita={cita} />)}
         </div>
-          
-          
+
+
       </div>
     </Fragment>
   );

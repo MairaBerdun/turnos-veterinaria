@@ -1,19 +1,26 @@
-import React from 'react';
-import "./style.css"
+import React, {Fragment} from 'react';
 
 const Appoitment = ({cita}) => {
 
 
     return (  
 
-        <div className="card">
-            <p><b>Nombre de la mascota:</b> {cita.mascota}</p>
-            <p><b>Especie:</b> {cita.especie}</p>
-            <p><b>Nombre del dueño:</b> {cita.dueño}</p>
-            <p><b>Fecha del turno:</b> {cita.fecha}</p>
-            <p><b>Horario:</b> {cita.hora}</p>
-            <p><b>Motivos:</b> {cita.sintomas}</p>
+      <Fragment>
+        <h3>Turnos</h3>
+        <div className="card" style={{width: '15rem'}, {margin:'8px'}}>
+        <div className="card-header">
+          Turno asignado
         </div>
+        <ul className="list-group list-group-flush">
+          <li className="list-group-item">Nombre de la mascota: {cita.mascota}</li>
+          <li className="list-group-item">Especie: {cita.especie}</li>
+          <li className="list-group-item">Nombre del dueño: {cita.dueño}</li>
+          <li className="list-group-item">Fecha del turno: {cita.fecha}</li>
+          <li className="list-group-item">Horario: {cita.hora}</li>
+          <li className="list-group-item">Motivos: {cita.sintomas}</li>
+        </ul>
+      </div>
+      </Fragment>
 
     );
 }

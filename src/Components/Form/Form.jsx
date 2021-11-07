@@ -63,8 +63,8 @@ const Form = ({ citas, setCitas }) => {
     })
 
     Swal.fire(
-      'Good job!',
-      'Turno añadido',
+      'Turno agendado!',
+      'Los esperamos',
       'success'
     )
 
@@ -74,68 +74,82 @@ const Form = ({ citas, setCitas }) => {
 
     <Fragment>
 
-
       <form onSubmit={SubmitCita}>
         {error ? <p className="error">Completar todos los campos</p> : null}
 
-        <h3>Crea tu cita</h3>
-        <label className="item">Nombre mascota</label>
-        <input
-          type="text"
-          name="mascota"
-          className="item"
-          placeholder="Nombre de la mascota"
-          autocomplete="off"
-          onChange={actualizarState}
-          value={mascota}
-        />
+        <h3>Solicita tu turno</h3>
 
-        <label className="item">Especie</label>
-        <input
-          type="text"
-          name="especie"
-          className="item"
-          placeholder="Tipo de especie de la mascota"
-          autocomplete="off"
-          onChange={actualizarState}
-          value={especie}
-        />
+        <div>
+          <div className="form-floating">
+            <input type="text"
+              name="mascota"
+              className="form-control"
+              id="floatingInput"
+              placeholder="Nombre de la mascota"
+              autocomplete="off"
+              onChange={actualizarState}
+              value={mascota} />
+            <label htmlFor="floatingInput">Nombre de la mascota</label>
+          </div>
 
-        <label className="item">Nombre dueño</label>
-        <input
-          type="text"
-          name="dueño"
-          className="item"
-          placeholder="Nombre dueño de la mascota"
-          autocomplete="off"
-          onChange={actualizarState}
-          value={dueño}
-        />
+          <div className="form-floating">
+            <input type="text"
+              name="especie"
+              className="form-control"
+              id="floatingPassword"
+              placeholder="Tipo de especie de la mascota"
+              autocomplete="off"
+              onChange={actualizarState}
+              value={especie} />
+            <label htmlFor="floatingPassword">Especie</label>
+          </div>
 
-        <label className="item">Fecha</label>
-        <input type="date" name="fecha" className="item"
-          onChange={actualizarState}
-          value={fecha}
+          <div className="form-floating">
+            <input type="text"
+              name="dueño"
+              className="form-control"
+              id="floatingPassword"
+              placeholder="Nombre del dueño"
+              autocomplete="off"
+              onChange={actualizarState}
+              value={dueño} />
+            <label htmlFor="floatingPassword">Nombre del dueño</label>
+          </div>
 
-        />
+          <div className="form-floating">
+            <input type="date"
+              name="fecha"
+              className="form-control"
+              id="floatingPassword"
+              onChange={actualizarState}
+              value={fecha} />
+            <label htmlFor="floatingPassword">Fecha</label>
+          </div>
 
-        <label className="item">Hora</label>
-        <input type="time"
-          name="hora"
-          className="item"
-          onChange={actualizarState}
-          value={hora}
-        />
+          <div className="form-floating">
+            <input type="time"
+              name="hora"
+              className="form-control"
+              id="floatingPassword"
+              onChange={actualizarState}
+              value={hora} />
+            <label htmlFor="floatingPassword">Horario del turno</label>
+          </div>
 
-        <label className="item">Sintomas</label>
-        <textarea name="sintomas"
-          className="item"
-          onChange={actualizarState}
-          value={sintomas}
-        ></textarea>
+          <div className="form-floating">
+            <input type="text"
+              name="sintomas"
+              className="form-control"
+              id="floatingInput"
+              placeholder="Sintomas"
+              autocomplete="off"
+              onChange={actualizarState}
+              value={sintomas} />
+            <label htmlFor="floatingInput">Motivos de la consulta</label>
+          </div>
 
-        <button type="submit" className="item button" onChange={actualizarState}>Agregar</button>
-
+          <button type="submit" className="btn btn-secondary" onChange={actualizarState}>Agendar</button>
+        </div>
 
       </form>
     </Fragment>
